@@ -1,6 +1,7 @@
 import React from 'react';
 import {Layout} from 'antd';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import MenuTop from './components/MenuTop';
 
 //Pages
 import Home from './pages/Home';
@@ -19,7 +20,7 @@ function App() {
     <Layout>
      <Router>
      <Header>
-         Header...
+         <MenuTop/>
        </Header>
        <Content>
          <Switch>
