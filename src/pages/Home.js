@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import useFetch from '../hooks/useFetch';
+import { URL_API, API} from '../config/config';
+import SliderMovies from '../components/SliderMovies';
 
 const Home = () => {
 
-    const movies  =useFetch('https://api.themoviedb.org/3/movie/now_playing?api_key=2d87ede0628c4db0159cdf1314515019&language=es-es&page=1');
-
-    console.log(movies);
-
+    const newMovies = useFetch(`${URL_API}/movie/now_playing?api_key=${API}&language=es-ES&page=1`);
     return (
-        <p>Estamos en home</p>
+        <Fragment>
+            <SliderMovies movies={newMovies}/>
+        </Fragment>
     );
 };
 
