@@ -1,6 +1,7 @@
 import React from 'react';
 import {Carousel, Button} from 'antd';
 import {Link} from 'react-router-dom';
+import Loading from '../Loading';
 
 import './SliderMovies.scss';
 
@@ -9,7 +10,7 @@ const SliderMovies = (props) => {
     const {movies} = props;
     
     if(movies.loading || !movies.result){
-        return 'Loading...';
+        return <Loading/>;
     }
 
     const {results} =  movies.result
