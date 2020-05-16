@@ -24,7 +24,7 @@ const SliderMovies = (props) => {
     )
 };
 
-function Movie(props){
+ function Movie(props){
     const {movie: {id, backdrop_path, title, overview}} = props;
 
     const backdropPath = `https://image.tmdb.org/t/p/original${backdrop_path}`;
